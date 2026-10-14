@@ -76,3 +76,23 @@ correlation = returns_wide.corr()
 
 print("\n--- Daily return correlation matrix ---")
 print(correlation.round(3))
+
+# Work Item 4: Monthly average closing price by ticker
+grouped = prices.groupby("Ticker").agg(
+    avg_close=("Close", "mean"),
+    avg_daily_return_pct=("Daily_Return_Pct", "mean"),
+    median_daily_return_pct=("Daily_Return_Pct", "median"),
+    return_std_pct=("Daily_Return_Pct", "std"),
+    avg_volume=("Volume", "mean"),
+)
+# A second summary by time. resample is the time version of groupby.
+monthly_avg_close = (
+    prices.set_index("Date")
+    .groupby("Ticker")["Close"]
+    .resample("ME")
+    .mean()
+    .unstack("Ticker")
+)
+
+print("Last three months of average adjusted close:")
+print(monthly_avg_close.tail(3))
