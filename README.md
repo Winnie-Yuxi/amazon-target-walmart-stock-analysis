@@ -37,3 +37,6 @@ The dataset was reviewed to confirm that the data was complete, organized, and r
 
 ## Item 3: Return Analysis and Correlation
 The correlation matrix shows that Amazon, Target, and Walmart had positive correlations, meaning their stock returns generally moved in the same direction. The strongest relationship was between Target and Walmart (0.409), while Amazon and Walmart had the weakest correlation (0.291). 
+
+## Item 4: Monthly Average Closing Price Summary
+The monthly average closing prices show how Amazon, Target, and Walmart performed over time. Amazon had the highest average stock price, while Walmart showed steady growth near the end of the period.
