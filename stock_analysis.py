@@ -123,3 +123,10 @@ movement_window = prices[
     prices["Date"].between("2023-03-01", "2023-04-15")
 ]
 
+return_matrix.plot.box(figsize=(9, 5))
+plt.title("Daily return distributions by ticker")
+plt.xlabel("Ticker")
+plt.ylabel("Daily return (%)")
+plt.tight_layout()
+plt.savefig("charts/return_distribution.png", dpi=150)
+plt.show()
