@@ -130,3 +130,16 @@ plt.ylabel("Daily return (%)")
 plt.tight_layout()
 plt.savefig("charts/return_distribution.png", dpi=150)
 plt.show()
+
+plt.figure(figsize=(7, 5))
+plt.scatter(
+    return_matrix["TICKER_A"],
+    return_matrix["TICKER_B"],
+    alpha=0.35,
+)
+plt.title("Daily return relationship: TICKER_A vs. TICKER_B")
+plt.xlabel("TICKER_A daily return (%)")
+plt.ylabel("TICKER_B daily return (%)")
+plt.tight_layout()
+plt.savefig("charts/return_relationship.png", dpi=150)
+plt.show()
