@@ -109,3 +109,12 @@ for ticker, ticker_data in prices.groupby("Ticker"):
     print(ticker)
     print("Highest return:", highest_return)
     print("Lowest return:", lowest_return)
+
+# Work Item 6: Visualizations
+normalized.plot(figsize=(10, 6))
+plt.title("Normalized price performance across the analysis period")
+plt.xlabel("Date")
+plt.ylabel("Indexed price (first observation = 100)")
+plt.tight_layout()
+plt.savefig("charts/normalized_prices.png", dpi=150)
+plt.show()
