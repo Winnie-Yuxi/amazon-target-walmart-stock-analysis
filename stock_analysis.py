@@ -118,3 +118,8 @@ plt.ylabel("Indexed price (first observation = 100)")
 plt.tight_layout()
 plt.savefig("charts/normalized_prices.png", dpi=150)
 plt.show()
+
+movement_window = prices[
+    prices["Date"].between("2023-03-01", "2023-04-15")
+]
+
