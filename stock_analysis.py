@@ -96,3 +96,16 @@ monthly_avg_close = (
 
 print("Last three months of average adjusted close:")
 print(monthly_avg_close.tail(3))
+
+# Work Item 5: Meaningful Period Returns
+for ticker, ticker_data in prices.groupby("Ticker"):
+    highest_return = ticker_data.sort_values(
+        "Daily_Return_Pct", ascending=False
+    ).iloc[0]
+    lowest_return = ticker_data.sort_values(
+        "Daily_Return_Pct", ascending=True
+    ).iloc[0]
+
+    print(ticker)
+    print("Highest return:", highest_return)
+    print("Lowest return:", lowest_return)
