@@ -16,18 +16,27 @@ January 1, 2020, to December 31, 2025.
 ## Business Question
 How did the stock performance of Amazon, Target, and Walmart differ from 2020 to 2025, and what business events may explain their significant price movements?
 
-## Reason for  s compete in retail but differ in their business
-models and customer segments. Comparing them helps us investigate how their stock performance responds to company-specific events and shared market conditions.
+## Reason for Stock Selection
+Amazon, Target, and Walmart compete in the retail industry but differ in their business models and customer segments. Amazon has a strong focus on e-commerce and cloud computing, while Target and Walmart rely heavily on retail stores alongside their online operations. Comparing these companies helps us investigate how stock performance responds to company-specific events and shared market conditions.
 
-## Structure
-import yfinance as yf
-import pandas as pd
-import matplotlib.pyplot as plt
+## Tools and Libraries
+Python: Data analysis and calculations
+yfinance: Historical stock market data collection
+pandas: Data cleaning, grouping, descriptive statistics, and correlation analysis
+Matplotlib: Stock price and return visualizations
+GitHub: Version control and team collaboration
 
-## Project Status
-Repository setup is complete. Data collection and analysis are in progress.
-
-Findings
+## Setup and Installation
+To reproduce this analysis:
+1. Install Python 3 and Git.
+2. Clone the GitHub repository:
+git clone https://github.com/Winnie-Yuxi/amazon-target-walmart-stock-analysis.git
+3. Open the repository folder:
+cd amazon-target-walmart-stock-analysis
+4. Install the required libraries:
+python3 -m pip install -r requirements.txt
+5. Run the analysis:
+python3 stock_analysis.py
 
 ## Item 1: Data Collection
 Stock price data for Amazon, Target, and Walmart was successfully collected from 2020 to 2025. This data provides the foundation for comparing the performance of the three companies.
@@ -114,4 +123,60 @@ This box plot compares daily return volatility across the three stocks, showing 
 ![Daily Return Relationship](charts/return_relationship.png)
 
 This scatter plot shows a positive but relatively weak relationship between Amazon and Target's daily returns (r = 0.359), helping investors understand the degree to which their stock movements are related.
+
+## Item 7: Final Summary
+
+### Research Overview
+
+This project investigated the stock performance of Amazon, Target, and Walmart from 2020 to 2025. Using historical adjusted stock prices, daily returns, descriptive statistics, correlations, and visualizations, we compared their long-term performance and examined significant movements associated with business events.
+
+Our analysis combined quantitative stock data with company financial announcements to explore how profitability, operating costs, and broader economic conditions may influence investor reactions.
+
+### Key Findings
+
+Finding 1: Walmart had the lowest daily return volatility.
+
+Walmart's daily return standard deviation was approximately 1.45%, compared with 2.25% for Amazon and 2.24% for Target. Walmart's average daily return was approximately 0.085%, similar to Amazon's 0.084% and higher than Target's 0.019%.
+These results suggest that Walmart experienced relatively stable historical daily returns during the study period.
+
+Finding 2: Target and Walmart had the strongest daily return correlation.
+
+The correlation between Target and Walmart was 0.409, compared with 0.359 between Amazon and Target and 0.291 between Amazon and Walmart.
+This suggests that Target and Walmart were more closely related in their daily stock movements, potentially reflecting their exposure to similar retail industry conditions. However, correlation does not establish causation.
+
+Finding 3: Earnings announcements were associated with major stock price declines.
+
+Amazon declined 14.05% on April 29, 2022, Walmart declined 11.38% on May 17, 2022, and Target declined 24.93% on May 18, 2022.
+These movements coincided with disappointing financial results and concerns about profitability, illustrating the importance of monitoring earnings reports and operating expenses.
+
+Finding 4: Long-term performance differed significantly across the three companies.
+
+The annual average adjusted closing prices showed that Amazon recovered after its 2022–2023 weakness, Walmart generally strengthened in later years, and Target experienced a decline from its earlier highs.
+These differences suggest that companies within the same industry can experience different market outcomes because of their business models, operating performance, and investor expectations.
+
+### Limitations and Open Questions
+
+This analysis has several limitations.
+First, historical stock prices and correlations cannot establish direct causal relationships between financial announcements and market movements.
+Second, the study covers only three companies and the 2020–2025 period, so its findings may not apply to other companies or time periods.
+Third, daily adjusted closing prices do not capture intraday price movements. Correlation analysis also measures only linear relationships and does not fully explain differences in company fundamentals.
+Future research could examine how interest rates, consumer spending, e-commerce growth, and changes in operating margins affect retail stock performance.
+
+### Conclusion and Business Implications
+
+Our analysis demonstrates that Amazon, Target, and Walmart experienced different stock price trends despite operating in related markets.
+The significant declines in April and May 2022 highlight how inflation, rising operating costs, and disappointing financial results can affect investor confidence.
+For investors and business analysts, these findings emphasize the importance of evaluating profitability, volatility, and company-specific financial performance rather than relying only on stock price movements or revenue growth.
+
+### References
+
+- Amazon.com, Inc. (2022, April 28). Amazon.com announces first quarter results. Amazon Investor Relations
+- Walmart Inc. (2022, May 17). Walmart releases Q1 FY23 earnings. Walmart Corporate
+- Target Corporation. (2022, May 18). Target Corporation reports first quarter earnings. Target Corporate
+
+### Reproducibility and Data Notes
+
+This project uses historical market data downloaded through yfinance. The analysis requires an internet connection when retrieving data.
+Historical adjusted prices may be revised by the data provider, and results may change slightly if the source data or software versions change.
+The repository includes the Python analysis script, dependency list, generated visualizations, and summary CSV files.
 
